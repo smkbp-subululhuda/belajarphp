@@ -1,22 +1,21 @@
 <?php
 include_once "config/config.php";
 
-$query = mysqli_query($koneksi,
-"DELETE FROM data_siswa
-       WHERE id_siswa='$_GET[id]'");
+//menghapus data sesuai id_siswa yang dipilih
+$q = "DELETE FROM data_siswa WHERE id_siswa='$_GET[id]'";
+$query = mysqli_query($koneksi,$q);
 
 if ($query){
-//    echo "Data berhasil dihapus..!";
-//    echo "<meta http-equiv='refresh' content='1.5;
-//            url=app_siswa.php'>";
+// mod : menambah alert jika query berhasil
     echo "<script>
     window.alert('Data berhasil dihapus');
     window.location.href='app_siswa.php';
     </script>";
 } else {
-    echo "Data gagal hapus!" ;
-    echo "<meta http-equiv='refresh' content='1.5;
-            url=app_siswa.php'>";
+// mod : menambah alert jika query gagal
+    echo "<script>
+    window.alert('Data gagal dihapus');
+    window.location.href='app_siswa.php';
+    </script>";
 }
-
 ?>

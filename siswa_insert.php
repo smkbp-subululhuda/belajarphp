@@ -20,16 +20,16 @@ $query=mysqli_query($koneksi,$q);
 
 //aksi jika query sukses maupun gagal
 if ($query){
-//    echo "Data berhasil ditambahkan..!";
-//    echo "<meta http-equiv='refresh' content='1.5;
-//            url=app_siswa.php'>";
+    //mod : menambah action alert jika query berhasil
     echo "<script>
     window.alert('Data berhasil ditambah');
     window.location.href='app_siswa.php';
     </script>";
 } else {
-    echo "Data gagal ditambahkan!" ;
-    echo "<meta http-equiv='refresh' content='1.5;
-            url=app_siswa.php'>";
+//mod : menambah action alert jika query berhasil
+    echo "<script>
+    window.alert('Data gagal ditambah');
+    window.location.href='app_siswa.php';
+    </script>";
 }
 ?>
