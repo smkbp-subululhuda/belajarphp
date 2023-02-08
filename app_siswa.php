@@ -40,9 +40,9 @@ include "config/config.php";
     <td><?= $data['kelas']; ?></td>
     <td><?= $data['jurusan']; ?></td>
     <td>
-        <a href="siswa_edit.php&id=<?= $data['id_siswa']; ?>">
+        <a href="siswa_edit.php?id=<?= $data['id_siswa'] ?>">
             Edit</a> |
-        <a href="siswa_delete.php&id=<?= $data['id_siswa']; ?>">
+        <a href="siswa_delete.php?id=<?= $data['id_siswa'] ?>">
             Hapus</a>
     </td>
 </tr>
